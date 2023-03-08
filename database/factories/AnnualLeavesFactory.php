@@ -4,6 +4,7 @@
 
 use App\Models\AnnualLeaves;
 
+// Create factory for AnnualLeave
 $factory->define(AnnualLeaves::class, function () {
     return [
         'start_date' => now(),

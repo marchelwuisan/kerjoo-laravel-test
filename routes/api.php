@@ -18,6 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// AnnualLeaves Routes
 Route::get('/annual-leaves', [AnnualLeavesController::class, 'index']);
 Route::post('/annual-leaves', [AnnualLeavesController::class, 'store']);
 Route::get('/annual-leaves/{id}', [AnnualLeavesController::class, 'show']);

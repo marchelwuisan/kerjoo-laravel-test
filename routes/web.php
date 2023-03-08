@@ -17,13 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Test pages Routes
 Route::get('/test-grid', function () {
     return view('test-grid');
 });
-
 Route::get('/test-flex', function () {
     return view('test-flex');
 });
-Auth::routes();
 
+Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

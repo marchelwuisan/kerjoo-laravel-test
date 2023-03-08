@@ -22,6 +22,7 @@ class AnnualLeavesController extends Controller
      */
     public function index()
     {
+        // Controller function to get all leave data
         $annualLeaves =  $this->annualLeavesRepository->allAnnualLeaves();
 
         return view('test-flex', compact('annualLeaves'));
@@ -35,6 +36,7 @@ class AnnualLeavesController extends Controller
      */
     public function store(AnnualLeavesRequest $request)
     {
+        // Controller function to store leave data
         $data = $request->all();
 
         $this->annualLeavesRepository->storeCategory($data);
@@ -50,6 +52,7 @@ class AnnualLeavesController extends Controller
      */
     public function show($id)
     {
+        // Controller function to show a specific leave data
         $annualLeaves = $this->annualLeavesRepository->findAnnualLeave($id);
 
         return view('test-flex', compact('annualLeaves'));
